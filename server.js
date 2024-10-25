@@ -46,11 +46,23 @@ app.get('/api/movies', (req, res) => {
     res.status(200).json({ myMovies:movies });
 });
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
 const path = require('path');
 
 app.get('/index', (req, res) => {
     res.sendFile(path.join(__dirname,'index.html'));
 });
+
+app.get('/name', (req, res) => {
+    res.send("Hello "+req.query.firstname+" "+req.query.lastname);
+});
+
+app.post('/name', (req, res) => {
+    res.send("Hi "+req.body.firstname+" "+req.body.lastname);
+});
+
 app.use(express.static('public'));
 
 app.listen(port, () => {
