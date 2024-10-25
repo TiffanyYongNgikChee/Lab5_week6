@@ -11,9 +11,11 @@ app.get('/', (req, res) => {
     res.send('Welcome to Data Respresentation & Querying');
 });
 
-app.get('/whatever',(req,res)=>{
-    res.send('whatever');
-})
+app.get('/hello/:name/:sname', (req, res) => {
+    const name = req.params.name;
+    const sname = req.params.sname;
+    res.send(`Hello ${name} ${sname}`);
+});
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
