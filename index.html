@@ -1,19 +1,34 @@
 <html>
 <body>
+    <!-- Section for demonstrating the GET method -->
     <h2>GET METHOD</h2>
 
+    <!-- Form to submit data using the GET method -->
+    <!-- The form action specifies the URL to send the data to ('/name') -->
+    <!-- The method attribute is set to 'GET', meaning the data will be sent as URL parameters -->
     <form action="/name" method="GET">
+        <!-- Input field for the first name -->
         First name: <input type="text" name="firstname"><br>
+        <!-- Input field for the last name -->
         Last name: <input type="text" name="lastname"><br>
+        <!-- Submit button to send the form data -->
         <input type="submit" value="Submit">
     </form>
 
+    <!-- Section for demonstrating the POST method -->
     <h2>POST METHOD<h2>
-        <form action="/name" method="POST">
-            First name: <input type="text" name="firstname"><br>
-            Last name: <input type="text" name="lastname"><br>
-            <input type="submit" value="Submit">
-        </form>
+
+    <!-- Form to submit data using the POST method -->
+    <!-- The form action specifies the URL to send the data to ('/name') -->
+    <!-- The method attribute is set to 'POST', meaning the data will be sent in the request body -->
+    <form action="/name" method="POST">
+        <!-- Input field for the first name -->
+        First name: <input type="text" name="firstname"><br>
+        <!-- Input field for the last name -->
+        Last name: <input type="text" name="lastname"><br>
+        <!-- Submit button to send the form data -->
+        <input type="submit" value="Submit">
+    </form>
     
 </body>
 </html>
